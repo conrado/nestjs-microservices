@@ -14,7 +14,7 @@ services:
       - POSTGRES_DB=workflows
       - RABBITMQ_URL=amqp://rabbitmq:5672
     deploy:
-      replicas: 1 # This instructs Docker Compose to create 3 replicas of the "workflows-service" service
+      replicas: 3 # This instructs Docker Compose to create 3 replicas of the "workflows-service" service
     volumes:
       - ./libs:/usr/src/app/libs
       - ./package.json:/usr/src/app/package.json
